@@ -1,0 +1,12 @@
+<!doctype html> <html lang="ru"> <head><style>@property --lab-r{syntax:'<length>';inherits:false;initial-value:0px}
+html.lab-in::after{content:"";position:fixed;inset:0;z-index:2147483647;pointer-events:none;background:#020406;
+-webkit-mask:radial-gradient(circle at 50% 50%,transparent var(--lab-r),#000 calc(var(--lab-r) + 90px));
+mask:radial-gradient(circle at 50% 50%,transparent var(--lab-r),#000 calc(var(--lab-r) + 90px));
+animation:lab-open 1.5s cubic-bezier(.7,0,.2,1) .15s both}
+html.lab-in::before{content:"";position:fixed;left:50%;top:50%;z-index:2147483647;pointer-events:none;border-radius:50%;
+transform:translate(-50%,-50%);border:1px solid rgba(170,200,225,.55);box-shadow:0 0 40px rgba(120,170,215,.35),inset 0 0 40px rgba(120,170,215,.25);
+animation:lab-ring 1.5s cubic-bezier(.7,0,.2,1) .15s both}
+@keyframes lab-open{to{--lab-r:160vmax}}
+@keyframes lab-ring{from{width:0;height:0;opacity:1}80%{opacity:.7}to{width:330vmax;height:330vmax;opacity:0}}
+@media (prefers-reduced-motion:reduce){html.lab-in::after,html.lab-in::before{animation-duration:.01s}}</style>
+<script>(function(){try{var u=new URL(location.href);if(u.searchParams.get('from')!=='lab')return;u.searchParams.delete('from');history.replaceState(history.state,'',u.pathname+u.search+u.hash);var h=document.documentElement;h.classList.add('lab-in');setTimeout(function(){h.classList.remove('lab-in')},1900)}catch(e){}})()</script> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <title>Lovesick Radio 3D</title> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet"> <script type="module" crossorigin src="./assets/index-D_kSTLrn.js"></script> <link rel="stylesheet" crossorigin href="./assets/index-BxxCHRfy.css"> </head> <body> <div id="root"></div> </body> </html> 
